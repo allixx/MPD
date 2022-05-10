@@ -54,6 +54,8 @@ thirdparty_libs = [
     libnfs,
     jack,
     boost,
+    soxr,
+    libsamplerate,
 ]
 
 # build the third-party libraries
