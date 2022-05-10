@@ -671,3 +671,29 @@ boost = BoostProject(
     '71feeed900fbccca04a3b4f2f84a7c217186f28a940ed8b7ed4725986baf99fa',
     'include/boost/version.hpp',
 )
+
+soxr = CmakeProject(
+    'https://downloads.sourceforge.net/project/soxr/soxr-0.1.3-Source.tar.xz',
+    'b111c15fdc8c029989330ff559184198c161100a59312f5dc19ddeb9b5a15889',
+    'lib/libsoxr.a',
+    [
+        '-DBUILD_SHARED_LIBS=OFF',
+        '-DCMAKE_BUILD_TYPE=Release',
+        '-DWITH_OPENMP=OFF',
+        '-Wno-dev',
+    ],
+    base='soxr-0.1.3-Source',
+    name='soxr',
+    version='0.1.3',
+    patches='src/lib/soxr/patches',
+)
+
+libsamplerate = CmakeProject(
+    'https://github.com/libsndfile/libsamplerate/releases/download/0.2.2/libsamplerate-0.2.2.tar.xz',
+    '3258da280511d24b49d6b08615bbe824d0cacc9842b0e4caf11c52cf2b043893',
+    'lib/libsamplerate.a',
+    [
+        '-DBUILD_SHARED_LIBS=OFF',
+        '-DCMAKE_BUILD_TYPE=Release',
+    ],
+)

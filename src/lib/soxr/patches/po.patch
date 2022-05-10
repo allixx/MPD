@@ -1,0 +1,12 @@
+--- soxr-0.1.3-Source.orig/src/CMakeLists.txt.orig
++++ soxr-0.1.3-Source/src/CMakeLists.txt
+@@ -86,7 +86,7 @@
+   PUBLIC_HEADER "${PROJECT_NAME}.h")
+ if (BUILD_FRAMEWORK)
+   set_target_properties (${PROJECT_NAME} PROPERTIES FRAMEWORK TRUE)
+-elseif (NOT WIN32)
++else ()
+   set (TARGET_PCS ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc)
+   configure_file (${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}.pc.in ${TARGET_PCS})
+   install (FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc DESTINATION ${LIB_INSTALL_DIR}/pkgconfig)
+
