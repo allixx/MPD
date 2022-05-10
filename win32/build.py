@@ -46,6 +46,7 @@ thirdparty_libs = [
     ffmpeg,
     libnfs,
     libsamplerate,
+    soxr,
 ]
 
 # build the third-party libraries
